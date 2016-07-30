@@ -1,1 +1,1 @@
-module.exports = require('dist/chai-struct')
+module.exports = require('dist/chai-struct').default
