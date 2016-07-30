@@ -1,0 +1,36 @@
+{
+  "name": "chai-struct",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src test",
+    "test": "mocha -r babel-register",
+    "tdd": "npm test -- -w -R min",
+    "cover": "babel-node node_modules/.bin/babel-istanbul cover _mocha",
+    "compile": "babel -d dist/ src/",
+    "prepublish": "npm run lint && npm test && npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebearingedge/chai-struct.git"
+  },
+  "keywords": [],
+  "author": "Tim Davis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thebearingedge/chai-struct/issues"
+  },
+  "homepage": "https://github.com/thebearingedge/chai-struct#readme",
+  "devDependencies": {
+    "babel-cli": "6.11.4",
+    "babel-eslint": "6.1.2",
+    "babel-istanbul": "0.11.0",
+    "babel-preset-es2015": "6.9.0",
+    "chai": "3.5.0",
+    "coveralls": "2.11.12",
+    "eslint": "3.2.0",
+    "mocha": "2.5.3",
+    "type-diff": "1.0.2"
+  }
+}
