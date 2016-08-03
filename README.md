@@ -14,7 +14,7 @@ describe('my data', () => {
 
   const fanbois = {
     id: 1,
-    groupName: 'JS Fanbois',
+    groupTitle: 'JS Fanbois',
     members: [
       { username: 'brendaneich' },
       { username: 'douglascrockford' }
