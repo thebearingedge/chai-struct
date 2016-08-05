@@ -26,7 +26,7 @@ describe('my data', () => {
     expect(fanbois).to.have.structure({
       id: Number,
       groupTitle: String,
-      users: [{ username: String }]
+      members: [{ username: String }]
     })
   })
 
@@ -35,14 +35,14 @@ describe('my data', () => {
     expect(fanbois).to.have.structure({
       id: Number,
       groupTitle: String,
-      users: [{ username: Boolean }] // <- this ain't right
+      members: [{ username: Boolean }] // <- this ain't right
     })
 
     /**
      * 1) my data has the correct structure?:
      * AssertionError: Unexpected structure:
      * {
-     *   "users": {
+     *   "members": {
      *     "0": {
      *       "username": {
      *         "actual": "String",
