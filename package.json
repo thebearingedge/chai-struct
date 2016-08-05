@@ -1,6 +1,6 @@
 {
   "name": "chai-struct",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   },
   "keywords": [],
   "author": "Tim Davis",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/thebearingedge/chai-struct/issues"
   },
