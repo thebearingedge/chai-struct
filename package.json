@@ -1,6 +1,6 @@
 {
   "name": "chai-struct",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -33,6 +33,6 @@
     "mocha": "2.5.3"
   },
   "dependencies": {
-    "type-diff": "1.0.2"
+    "type-diff": "1.0.3"
   }
 }
