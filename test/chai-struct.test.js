@@ -18,7 +18,7 @@ describe('chaiStruct', () => {
     const Type = { id: Number, name: String }
     const value = { id: 1 }
     const willThrow = () => value.should.have.structure(Type)
-    expect(willThrow).to.throw(AssertionError, 'foo')
+    expect(willThrow).to.throw(AssertionError, 'Unexpected Type structure:')
   })
 
 })
