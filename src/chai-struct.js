@@ -1,17 +1,14 @@
-import { matches, diff } from 'type-diff'
+import { diff } from 'type-diff'
 
+export default function chaiStruct({ Assertion, assert }, utils) {
 
-export default function chaiStruct(chai, utils) {
-
-  const { Assertion, assert } = chai
-
-  utils.addMethod(Assertion.prototype, 'structure', function (Struct) {
-    const isMatch = matches(Struct, this._obj)
-    if (!isMatch) assert(isMatch, format(diff(Struct, this._obj)))
+  utils.addMethod(Assertion.prototype, 'structure', function (Type) {
+    const result = diff(Type, this._obj)
+    assert(!result, format(result))
   })
 }
 
 const format = result => {
   const json = JSON.stringify(result, null, 2)
-  return `Unexpected structure:\n${json}`
+  return `Unexpected Type structure:\n${json}`
 }
