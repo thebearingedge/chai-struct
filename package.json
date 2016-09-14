@@ -1,7 +1,7 @@
 {
   "name": "chai-struct",
   "description": "Simple, readable, structural type comparisons for Chai",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "dist/index.js",
   "scripts": {
     "lint": "eslint src/",
@@ -49,6 +49,6 @@
     "rimraf": "2.5.4"
   },
   "dependencies": {
-    "type-diff": "3.0.0"
+    "type-diff": "3.0.1"
   }
 }
