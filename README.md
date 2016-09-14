@@ -10,34 +10,29 @@ Chai assertion for Object structures
 Verify that data has a given structure.
 
 ```javascript
+import chai, { expect } from 'chai'
+import { chaiStruct } from 'chai-struct'
+
+chai.use(chaiStruct)
+
 describe('my data', () => {
 
   const fanbois = {
     id: 1,
-    groupTitle: 'JS Fanbois',
+    groupName: 'JS Fanbois',
     members: [
       { username: 'brendaneich' },
-      { username: 'douglascrockford' }
+      { username: 'douglascrockford' },
+      { username: true } // <- this ain't right
     ]
   }
 
-  it('has the correct structure!', () => {
-
+  it('has the correct structure?', () => {
     expect(fanbois).to.have.structure({
       id: Number,
-      groupTitle: String,
+      groupName: String,
       members: [{ username: String }]
     })
-  })
-
-  it('has the correct structure?', () => {
-
-    expect(fanbois).to.have.structure({
-      id: Number,
-      groupTitle: String,
-      members: [{ username: Boolean }] // <- this ain't right
-    })
-
     /**
      * 1) my data has the correct structure?:
      * AssertionError: Unexpected structure:
@@ -45,16 +40,17 @@ describe('my data', () => {
      *   "members": {
      *     "0": {
      *       "username": {
-     *         "actual": "String",
-     *         "expected": "Boolean",
-     *         "value": "brendaneich"
+     *         "actual": "Boolean",
+     *         "expected": "String",
+     *         "value": "true"
      *       }
      *     }
      *   }
      * }
      */
-
   })
 
 })
 ```
+
+Supports `Optional`, `Nullable`, and `Any` types from [`type-diff`](https://github.com/thebearingedge/type-diff).
