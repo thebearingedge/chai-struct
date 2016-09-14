@@ -52,3 +52,7 @@ describe('my data', () => {
 ```
 
 Supports `Optional`, `Nullable`, and `Any` types from [`type-diff`](https://github.com/thebearingedge/type-diff).
+
+```js
+import { chaiStruct, Optional, Nullable, Any } from 'chai-struct'
+```
