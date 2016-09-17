@@ -40,7 +40,7 @@
     "babel-plugin-transform-export-extensions": "6.8.0",
     "babel-preset-node6": "11.0.0",
     "chai": "3.5.0",
-    "coveralls": "2.11.12",
+    "coveralls": "2.11.13",
     "eslint": "3.5.0",
     "global": "4.3.0",
     "husky": "0.11.7",
