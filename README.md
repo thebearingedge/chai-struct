@@ -36,7 +36,7 @@ describe('my data', () => {
      * AssertionError: Unexpected structure:
      * {
      *   "members": {
-     *     "0": {
+     *     "2": {
      *       "username": {
      *         "actual": "Boolean",
      *         "expected": "String",
