@@ -34,21 +34,21 @@
     "url": "git+https://github.com/thebearingedge/chai-struct.git"
   },
   "devDependencies": {
-    "babel-cli": "6.18.0",
-    "babel-eslint": "7.1.1",
-    "babel-istanbul": "0.12.1",
-    "babel-plugin-transform-export-extensions": "6.8.0",
+    "babel-cli": "6.24.0",
+    "babel-eslint": "7.2.1",
+    "babel-istanbul": "0.12.2",
+    "babel-plugin-transform-export-extensions": "6.22.0",
     "babel-preset-node6": "11.0.0",
     "chai": "3.5.0",
-    "coveralls": "2.11.15",
-    "eslint": "3.12.2",
+    "coveralls": "2.13.0",
+    "eslint": "3.19.0",
     "global": "4.3.1",
-    "husky": "0.12.0",
+    "husky": "0.13.3",
     "mocha": "3.2.0",
-    "npm-run-all": "3.1.2",
-    "rimraf": "2.5.4"
+    "npm-run-all": "4.0.2",
+    "rimraf": "2.6.1"
   },
   "dependencies": {
-    "type-diff": "3.0.2"
+    "type-diff": "3.1.0"
   }
 }
