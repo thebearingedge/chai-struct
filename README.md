@@ -5,6 +5,8 @@ Simple, readable, structural type comparisons for Chai
 
 ## Usage
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/thebearingedge/chai-struct.svg)](https://greenkeeper.io/)
+
 Verify that data has a given structure.
 
 ```javascript
