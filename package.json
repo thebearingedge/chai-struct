@@ -34,7 +34,7 @@
     "url": "git+https://github.com/thebearingedge/chai-struct.git"
   },
   "devDependencies": {
-    "babel-cli": "6.24.0",
+    "babel-cli": "6.24.1",
     "babel-eslint": "7.2.1",
     "babel-istanbul": "0.12.2",
     "babel-plugin-transform-export-extensions": "6.22.0",
