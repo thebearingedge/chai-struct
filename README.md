@@ -1,11 +1,14 @@
+chai-struct
+--
+
 Simple, readable, structural type comparisons for Chai
 
 [![Build Status](https://travis-ci.org/thebearingedge/chai-struct.svg?branch=master)](https://travis-ci.org/thebearingedge/chai-struct.svg?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/thebearingedge/chai-struct/badge.svg?branch=master)](https://coveralls.io/github/thebearingedge/chai-struct?branch=master)
-
-## Usage
-
 [![Greenkeeper badge](https://badges.greenkeeper.io/thebearingedge/chai-struct.svg)](https://greenkeeper.io/)
+
+### Usage
+
 
 Verify that data has a given structure.
 
