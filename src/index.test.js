@@ -21,4 +21,11 @@ describe('chaiStruct', () => {
     expect(willThrow).to.throw(AssertionError, 'Unexpected Type structure:')
   })
 
+  it('throws if a Type is `undefined` or `null`', () => {
+    const Type = null
+    const value = 1
+    const willThrow = () => value.should.have.structure(Type)
+    expect(willThrow).to.throw(AssertionError, 'Type structure must be defined and non-null.')
+  })
+
 })
