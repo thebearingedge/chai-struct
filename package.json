@@ -43,7 +43,7 @@
     "coveralls": "2.13.1",
     "eslint": "3.19.0",
     "global": "4.3.2",
-    "husky": "0.13.3",
+    "husky": "0.13.4",
     "mocha": "3.4.1",
     "npm-run-all": "4.0.2",
     "rimraf": "2.6.1"
