@@ -41,7 +41,7 @@
     "babel-preset-node6": "11.0.0",
     "chai": "4.1.0",
     "coveralls": "2.13.1",
-    "eslint": "4.1.0",
+    "eslint": "4.5.0",
     "global": "4.3.2",
     "husky": "0.13.4",
     "mocha": "3.4.2",
