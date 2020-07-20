@@ -1,55 +1,128 @@
 {
   "name": "chai-struct",
-  "description": "Simple, readable, structural type comparisons for Chai",
-  "version": "3.0.3",
+  "version": "4.0.0",
+  "description": "Simple, readable, structural type assertions for Chai.",
   "main": "dist/index.js",
-  "scripts": {
-    "lint": "eslint src/",
-    "test": "mocha -r babel-register src/*.test.js",
-    "tdd": "npm t -s -- -w -R min",
-    "coverage": "babel-node node_modules/.bin/babel-istanbul cover _mocha --",
-    "cover": "rimraf coverage/ && run-s -s 'coverage {@}' -- src/*.test.js",
-    "transpile": "rimraf dist/ && babel -d dist/ --ignore *.test.js src/",
-    "precommit": "run-s -s lint cover transpile"
-  },
   "files": [
-    "dist/",
-    "index.d.ts"
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "!dist/**/*.test.*"
   ],
-  "engines": {
-    "node": ">=6.3.1",
-    "npm": ">=3.10.3"
+  "scripts": {
+    "test": "mocha",
+    "tdd": "mocha -w -R min",
+    "cover": "nyc mocha",
+    "lint": "eslint --ext .ts .",
+    "prepack": "tsc"
   },
-  "keywords": [
-    "object",
-    "schema",
-    "types",
-    "chai",
-    "plugin",
-    "structure"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "eslint --fix"
+    ]
+  },
+  "mocha": {
+    "extension": [
+      "ts"
+    ],
+    "spec": "src/**/*.test.ts",
+    "require": [
+      "ts-node/register"
+    ]
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "**/*.test.ts"
+    ],
+    "reporter": [
+      "html",
+      "text-summary"
+    ],
+    "cache": false,
+    "temp-dir": "coverage/.nyc_output/"
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "tsconfig.json"
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "standard-with-typescript"
+    ],
+    "rules": {
+      "padded-blocks": [
+        "error",
+        {
+          "classes": "always"
+        }
+      ],
+      "no-labels": 0,
+      "@typescript-eslint/no-namespace": 0,
+      "@typescript-eslint/triple-slash-reference": 0,
+      "@typescript-eslint/consistent-type-definitions": 0,
+      "@typescript-eslint/prefer-function-type": "off",
+      "@typescript-eslint/space-before-function-paren": [
+        "error",
+        {
+          "anonymous": "always",
+          "named": "never",
+          "asyncArrow": "always"
+        }
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "dist/",
+    "coverage/",
+    "node_modules/"
   ],
-  "author": "Tim Davis",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "4.2.11",
+    "@types/faker": "4.1.12",
+    "@types/mocha": "8.0.0",
+    "@types/node": "14.0.23",
+    "@typescript-eslint/eslint-plugin": "3.6.1",
+    "@typescript-eslint/parser": "3.6.1",
+    "chai": "4.2.0",
+    "coveralls": "3.1.0",
+    "eslint": "7.4.0",
+    "eslint-config-standard-with-typescript": "18.0.2",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "faker": "4.1.0",
+    "husky": "4.2.5",
+    "lint-staged": "10.2.11",
+    "mocha": "8.0.1",
+    "nyc": "15.1.0",
+    "ts-node": "8.10.2",
+    "type-diff": "4.0.1",
+    "typescript": "3.9.7"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thebearingedge/chai-struct.git"
   },
-  "devDependencies": {
-    "babel-cli": "6.26.0",
-    "babel-eslint": "8.2.4",
-    "babel-istanbul": "0.12.2",
-    "babel-plugin-transform-export-extensions": "6.22.0",
-    "babel-preset-node6": "11.0.0",
-    "chai": "4.1.2",
-    "eslint": "5.0.0",
-    "coveralls": "3.0.1",
-    "global": "4.3.2",
-    "husky": "1.0.0",
-    "mocha": "5.2.0",
-    "npm-run-all": "4.1.3",
-    "rimraf": "2.6.2"
+  "bugs": {
+    "url": "https://github.com/thebearingedge/chai-struct/issues"
   },
-  "dependencies": {
-    "type-diff": "3.1.1"
-  }
+  "homepage": "https://github.com/thebearingedge/chai-struct#readme"
 }

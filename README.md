@@ -1,14 +1,15 @@
 chai-struct
 --
 
-Simple, readable, structural type comparisons for Chai
+Simple, readable, structural type assertions for Chai.
 
 [![Build Status](https://travis-ci.org/thebearingedge/chai-struct.svg?branch=master)](https://travis-ci.org/thebearingedge/chai-struct.svg?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/thebearingedge/chai-struct/badge.svg?branch=master)](https://coveralls.io/github/thebearingedge/chai-struct?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/thebearingedge/chai-struct.svg)](https://greenkeeper.io/)
+[![dependencies Status](https://david-dm.org/thebearingedge/chai-struct/status.svg)](https://david-dm.org/thebearingedge/chai-struct)
+[![devDependencies Status](https://david-dm.org/thebearingedge/chai-struct/dev-status.svg)](https://david-dm.org/thebearingedge/chai-struct?type=dev)
 
 ### Usage
-
 
 Verify that data has a given structure.
 
