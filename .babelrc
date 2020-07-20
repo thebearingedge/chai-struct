@@ -1,4 +1,0 @@
-{
-  "plugins": ["transform-export-extensions"],
-  "presets": ["node6"]
-}
