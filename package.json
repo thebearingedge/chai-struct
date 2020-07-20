@@ -1,6 +1,6 @@
 {
   "name": "chai-struct",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Simple, readable, structural type assertions for Chai.",
   "main": "dist/index.js",
   "files": [
@@ -93,6 +93,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "type-diff": "4.0.1"
+  },
   "devDependencies": {
     "@types/chai": "4.2.11",
     "@types/faker": "4.1.12",
@@ -114,7 +117,6 @@
     "mocha": "8.0.1",
     "nyc": "15.1.0",
     "ts-node": "8.10.2",
-    "type-diff": "4.0.1",
     "typescript": "3.9.7"
   },
   "repository": {
